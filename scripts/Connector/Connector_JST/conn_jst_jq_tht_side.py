@@ -185,11 +185,14 @@ def generate_one_footprint(pins, variant, configuration):
     ], layer='Cmts.User', width=configuration['fab_line_width']))
     kicad_mod.append(Text(text='max PCB edge', at=[x1 + A/2 + 2.5, pcb_edge_y+1], size=[1.0, 1.0], layer='Cmts.User'))
 
-    #draw the pinsss
+    #draw line between each two pins
     for i in range(pins):
-        x = i * pitch
+        x = i * pitch + 0.5*pitch
         w = 0.25
-        kicad_mod.append(RectLine(start=[x-w,y3+1], end=[x+w,y2-0.5], layer='F.SilkS', width=configuration['silk_line_width']))
+        kicad_mod.append(PolygonLine(polygon=[
+            {'x': x, 'y':y3-off},
+            {'x': x, 'y':y2+off},
+        ], layer='F.SilkS', width=configuration['silk_line_width']))
 
     #add pin-1 designator
     px = 0
