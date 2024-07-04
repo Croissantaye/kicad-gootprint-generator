@@ -147,31 +147,33 @@ def generate_one_footprint(pins, variant, configuration):
     socket_inset = (x2-x1-socket_width)/2
     
     # Y end of socket part
-    y_socket_end = yo1 + off + 2.2 + 2.6 # values from datasheet
+    y_socket_end = yo1 + 2.2 + 2.6 # values from datasheet
 
     #draw the outline of the connector
     f_silk_outline = [
-    {'x': x_mid,'y': yo2},
-    {'x': xo1+socket_inset,'y': yo2},
-    {'x': xo1+socket_inset,'y': y_socket_end},
-    {'x': xo1,'y': y_socket_end},
-    {'x': xo1,'y': yo1},
-    {'x': xo1+wall+2*off,'y': yo1},
-    {'x': xo1+wall+2*off,'y': y3 - off},
-    {'x': A/2,'y': y3 - off},
-    #{'x': -1.1,'y': y3 + off}
+        {'x': x_mid,'y': yo2},
+        {'x': xo1+socket_inset,'y': yo2},
+        {'x': xo1+socket_inset,'y': y_socket_end + off},
+        {'x': xo1,'y': y_socket_end + off},
+        {'x': xo1,'y': yo1},
+        {'x': xo1+wall+2*off,'y': yo1},
+        {'x': xo1+wall+2*off,'y': y3 - off},
+        {'x': A/2,'y': y3 - off},
+        #{'x': -1.1,'y': y3 + off}
     ]
     kicad_mod.append(PolygonLine(polygon=f_silk_outline, layer='F.SilkS', width=configuration['silk_line_width']))
     kicad_mod.append(PolygonLine(polygon=f_silk_outline, x_mirror=x_mid, layer='F.SilkS', width=configuration['silk_line_width']))
 
     f_fab_outline = [
-    {'x': x_mid,'y': y2},
-    {'x': x1,'y': y2},
-    {'x': x1,'y': y1},
-    {'x': x1+wall,'y': y1},
-    {'x': x1+wall,'y': y3},
-    {'x': A/2,'y': y3},
-    #{'x': -1.1,'y': y3 + off}
+        {'x': x_mid,'y': y2},
+        {'x': x1+socket_inset,'y': y2},
+        {'x': x1+socket_inset,'y': y_socket_end},
+        {'x': x1,'y': y_socket_end},
+        {'x': x1,'y': y1},
+        {'x': x1+wall,'y': y1},
+        {'x': x1+wall,'y': y3},
+        {'x': A/2,'y': y3},
+        #{'x': -1.1,'y': y3 + off}
     ]
     kicad_mod.append(PolygonLine(polygon=f_fab_outline, layer='F.Fab', width=configuration['fab_line_width']))
     kicad_mod.append(PolygonLine(polygon=f_fab_outline, x_mirror=x_mid, layer='F.Fab', width=configuration['fab_line_width']))
