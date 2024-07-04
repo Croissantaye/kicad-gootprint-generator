@@ -61,7 +61,7 @@ def generate_one_footprint(pins, variant, configuration):
     V = 7.3
     #calculate fp dimensions
     A = (pins - 1) * pitch
-    B = A + 4.9
+    B = A + 5.0
 
     #Thickness of connector
     T = 9.5
@@ -139,28 +139,32 @@ def generate_one_footprint(pins, variant, configuration):
     xo2 = x2 + off
     yo2 = y2 + off
 
-    #thickness of the notches
-    notch = 1.5
-
     #wall thickness of the outline
     wall = 1.2 # measured from 3d model
+    
+    # Width of the south part of the connector (socket only)
+    socket_width = 20.7 # measured from 3d model
+    socket_inset = (x2-x1-socket_width)/2
+    
+    # Y end of socket part
+    y_socket_end = yo1 + off + 2.2 + 2.6 # values from datasheet
 
     #draw the outline of the connector
-    outline = [
+    f_silk_outline = [
     {'x': x_mid,'y': yo2},
-    {'x': xo1,'y': yo2},
+    {'x': xo1+socket_inset,'y': yo2},
+    {'x': xo1+socket_inset,'y': y_socket_end},
+    {'x': xo1,'y': y_socket_end},
     {'x': xo1,'y': yo1},
     {'x': xo1+wall+2*off,'y': yo1},
     {'x': xo1+wall+2*off,'y': y3 - off},
     {'x': A/2,'y': y3 - off},
     #{'x': -1.1,'y': y3 + off}
     ]
-    if variant == 'A-1':
-        outline = outline[:-1]
-    kicad_mod.append(PolygonLine(polygon=outline, layer='F.SilkS', width=configuration['silk_line_width']))
-    kicad_mod.append(PolygonLine(polygon=outline, x_mirror=x_mid, layer='F.SilkS', width=configuration['silk_line_width']))
+    kicad_mod.append(PolygonLine(polygon=f_silk_outline, layer='F.SilkS', width=configuration['silk_line_width']))
+    kicad_mod.append(PolygonLine(polygon=f_silk_outline, x_mirror=x_mid, layer='F.SilkS', width=configuration['silk_line_width']))
 
-    outline = [
+    f_fab_outline = [
     {'x': x_mid,'y': y2},
     {'x': x1,'y': y2},
     {'x': x1,'y': y1},
@@ -169,8 +173,8 @@ def generate_one_footprint(pins, variant, configuration):
     {'x': A/2,'y': y3},
     #{'x': -1.1,'y': y3 + off}
     ]
-    kicad_mod.append(PolygonLine(polygon=outline, layer='F.Fab', width=configuration['fab_line_width']))
-    kicad_mod.append(PolygonLine(polygon=outline, x_mirror=x_mid, layer='F.Fab', width=configuration['fab_line_width']))
+    kicad_mod.append(PolygonLine(polygon=f_fab_outline, layer='F.Fab', width=configuration['fab_line_width']))
+    kicad_mod.append(PolygonLine(polygon=f_fab_outline, x_mirror=x_mid, layer='F.Fab', width=configuration['fab_line_width']))
 
 
     #draw the pinsss
