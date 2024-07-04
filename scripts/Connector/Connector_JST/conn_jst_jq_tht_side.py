@@ -178,7 +178,7 @@ def generate_one_footprint(pins, variant, configuration):
     kicad_mod.append(PolygonLine(polygon=f_fab_outline, x_mirror=x_mid, layer='F.Fab', width=configuration['fab_line_width']))
 
     # Add "PCB edge" line & text
-    pcb_edge_y = 7.6 # from datasheet
+    pcb_edge_y = 2.6 # from datasheet. NOTE: Need to use receptacle variant here.
     kicad_mod.append(PolygonLine(polygon=[
         {'x': x1 - 0.5, 'y': pcb_edge_y},
         {'x': x2 + 0.5, 'y': pcb_edge_y},
@@ -186,9 +186,8 @@ def generate_one_footprint(pins, variant, configuration):
     kicad_mod.append(Text(text='max PCB edge', at=[x1 + A/2 + 2.5, pcb_edge_y+1], size=[1.0, 1.0], layer='Cmts.User'))
 
     #draw line between each two pins
-    for i in range(pins):
+    for i in range(pins-1):
         x = i * pitch + 0.5*pitch
-        w = 0.25
         kicad_mod.append(PolygonLine(polygon=[
             {'x': x, 'y':y3-off},
             {'x': x, 'y':y2+off},
