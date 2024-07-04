@@ -143,8 +143,7 @@ def generate_one_footprint(pins, variant, configuration):
     wall = 1.2 # measured from 3d model
     
     # Width of the south part of the connector (socket only)
-    socket_width = 20.7 # measured from 3d model
-    socket_inset = (x2-x1-socket_width)/2
+    socket_inset = 0.9 # measured from 3d model
     
     # Y end of socket part
     y_socket_end = yo1 + 2.2 + 2.6 # values from datasheet
@@ -188,7 +187,6 @@ def generate_one_footprint(pins, variant, configuration):
 
     #draw the pinsss
     for i in range(pins):
-
         x = i * pitch
         w = 0.25
         kicad_mod.append(RectLine(start=[x-w,y3+1], end=[x+w,y2-0.5], layer='F.SilkS', width=configuration['silk_line_width']))
