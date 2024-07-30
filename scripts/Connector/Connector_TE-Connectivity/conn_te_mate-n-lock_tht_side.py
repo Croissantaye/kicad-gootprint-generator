@@ -189,12 +189,12 @@ def generate_one_footprint(pins_per_row, variant_param, configuration):
     optional_pad_params['tht_pad1_shape'] = Pad.SHAPE_ROUNDRECT
 
     for row_idx in range(number_of_rows):
-        initial = row_idx*pins_per_row + 1
+        initial = (row_idx+1)*pins_per_row
         kicad_mod.append(PadArray(
             pincount=pins_per_row, initial=initial, start=[row_idx*row, 0],
             y_spacing=pitch, type=Pad.TYPE_THT, shape=pad_shape,
             size=pad_size, drill=drill, layers=Pad.LAYERS_THT,
-            **optional_pad_params))
+            increment=lambda i: i-1, **optional_pad_params))
 
     for peg in peg_pos:
         kicad_mod.append(Pad(at=peg, type=Pad.TYPE_NPTH, shape=Pad.SHAPE_CIRCLE,
