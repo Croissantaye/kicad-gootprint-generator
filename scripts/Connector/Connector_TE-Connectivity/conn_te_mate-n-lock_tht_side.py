@@ -144,7 +144,6 @@ def generate_one_footprint(pins_per_row, variant_param, configuration):
     first_to_last_pad_y = (number_of_rows-1)*row_pitch
 
     center_x = first_to_last_pad_x/2
-    center_y = first_to_last_pad_y/2
     peg_x = center_x
     peg_y = (number_of_rows-1)*row_pitch + peg_to_nearest_pin
     peg_pos = [[peg_x + variant_param['peg_from_center'], peg_y]]
