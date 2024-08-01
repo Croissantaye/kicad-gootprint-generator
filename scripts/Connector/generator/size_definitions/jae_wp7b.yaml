@@ -1,0 +1,55 @@
+defaults:
+  library: 'JAE_WP7B'
+  positions: [17, 20, 25, 30, 35]
+  pad_pitch: 0.4
+  first_pin:
+    marker:
+      shape: 'triangle'
+      size: 1.0
+      offset: 0.0
+  parameters:
+    num_pins: $(num_pos*2)
+
+WP7B-PxxxVA1:
+  inherit: 'defaults'
+  description: '0.4mm Pitch, Stacking Type, Board-to-Board FPC connector, Plug, vertical'
+  fp_name: 'JAE_WP7B-P{num_pins:03d}VA1-R8000'
+  source: 'https://www.jae.com/direct/topics/topics_file_download/topics_id=66869&ext_no=06&index=0&_lang=en&v='
+  tags: 'conn jae fpc board to board'
+  row_pitch: 1.85
+  pads:
+    size:
+      x: 0.22
+      y: 0.55
+  body_size:
+    x_offset: 0.9
+    y: 1.36
+  first_pin:
+    position: 'top'
+
+WP7B-SxxxVA1:
+  inherit: 'defaults'
+  description: '0.4mm Pitch, Stacking Type, Board-to-Board FPC connector, Receptacle, vertical'
+  fp_name: 'JAE_WP7B-S{num_pins:03d}VA1-R8000'
+  source: 'https://www.jae.com/direct/topics/topics_file_download/topics_id=66869&ext_no=06&index=0&_lang=en&v='
+  tags: 'conn jae fpc board to board'
+  row_pitch: 2.4
+  pads:
+    size:
+      x: 0.22
+      y: 0.5
+  body_size:
+    x_offset: 1.5
+    y: 2.5
+  first_pin:
+    position: 'top'
+  mount_pads:
+    mp:
+      center:
+        x_offset: 0.825
+        y: [1.175, -1.175]
+      size: [0.75, 0.55]
+      shape: 'rect'
+      paste: True
+      copper: True
+      ends: 'both'
