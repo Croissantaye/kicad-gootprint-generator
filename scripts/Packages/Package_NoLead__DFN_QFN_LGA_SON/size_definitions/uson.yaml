@@ -216,4 +216,7 @@ USON-8-1EP_3x4mm_P0.8mm_EP0.2x2.4mm:
   num_pins_y: 4
 
   EP_size_x: 0.1 .. 0.2 .. 0.3
-  EP_size_y: 2.1 .. 2.4 .. 2.7
+  EP_size_y: 3.2
+  EP_num_paste_pads: [1, 2]
+  EP_paste_coverage: 0.25
+
