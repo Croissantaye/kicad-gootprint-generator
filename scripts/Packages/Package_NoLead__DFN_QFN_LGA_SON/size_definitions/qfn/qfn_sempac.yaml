@@ -32,19 +32,6 @@ QFN-12-1EP_3x3mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.55, 0.55]
-    # bottom_pad_size:
-    paste_avoid_via: True
-
   pitch: 0.65
   num_pins_x: 3
   num_pins_y: 3
@@ -87,19 +74,6 @@ QFN-16-1EP_3x3mm_P0.65mm:
     tolerance: 0.05
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
-
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.55, 0.55]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 4
@@ -144,18 +118,6 @@ QFN-12-1EP_4x4mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.8
   num_pins_x: 3
@@ -200,19 +162,6 @@ QFN-16-1EP_4x4mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.55, 0.55]
-    # bottom_pad_size:
-    paste_avoid_via: True
-
   pitch: 0.65
   num_pins_x: 4
   num_pins_y: 4
@@ -256,18 +205,6 @@ QFN-20-1EP_4x4mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 5
@@ -312,18 +249,6 @@ QFN-24-1EP_4x4mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 6
@@ -368,18 +293,6 @@ QFN-16-1EP_5x5mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.8
   num_pins_x: 4
@@ -424,18 +337,6 @@ QFN-20-1EP_5x5mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 5
@@ -480,18 +381,6 @@ QFN-24-1EP_5x5mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 6
@@ -536,18 +425,6 @@ QFN-28-1EP_5x5mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 7
@@ -592,18 +469,6 @@ QFN-32-1EP_5x5mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 8
@@ -648,18 +513,6 @@ QFN-40-1EP_5x5mm_P0.4mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.4
   num_pins_x: 10
@@ -704,18 +557,6 @@ QFN-40-1EP_5x7mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 10
@@ -760,18 +601,6 @@ QFN-16-1EP_6x6mm_P1.0mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 1.0
   num_pins_x: 4
@@ -816,18 +645,6 @@ QFN-24-1EP_6x6mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 6
@@ -872,18 +689,6 @@ QFN-28-1EP_6x6mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 7
@@ -928,18 +733,6 @@ QFN-36-1EP_6x6mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 9
@@ -984,18 +777,6 @@ QFN-40-1EP_6x6mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 10
@@ -1040,18 +821,6 @@ QFN-48-1EP_6x6mm_P0.4mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.4
   num_pins_x: 12
@@ -1096,18 +865,6 @@ QFN-28-1EP_7x7mm_P0.80mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.8
   num_pins_x: 7
@@ -1152,18 +909,6 @@ QFN-32-1EP_7x7mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 8
@@ -1208,18 +953,6 @@ QFN-44-1EP_7x7mm_P0.50mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 11
@@ -1264,18 +997,6 @@ QFN-48-1EP_7x7mm_P0.50mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 12
@@ -1320,18 +1041,6 @@ QFN-56-1EP_7x7mm_P0.40mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.40
   num_pins_x: 14
@@ -1376,18 +1085,6 @@ QFN-60-1EP_7x7mm_P0.40mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.40
   num_pins_x: 15
@@ -1432,18 +1129,6 @@ QFN-28-1EP_8x8mm_P0.80mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.80
   num_pins_x: 7
@@ -1488,18 +1173,6 @@ QFN-32-1EP_8x8mm_P0.80mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.80
   num_pins_x: 8
@@ -1544,18 +1217,6 @@ QFN-52-1EP_8x8mm_P0.50mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 13
@@ -1600,18 +1261,6 @@ QFN-56-1EP_8x8mm_P0.50mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.50
   num_pins_x: 14
@@ -1656,18 +1305,6 @@ QFN-44-1EP_9x9mm_P0.65mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.65
   num_pins_x: 11
@@ -1712,18 +1349,6 @@ QFN-64-1EP_9x9mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 16
@@ -1768,18 +1393,6 @@ QFN-28-1EP_12x7mm_P0.8mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.8
   num_pins_x: 7
@@ -1824,18 +1437,6 @@ QFN-80-1EP_12x12mm_P0.5mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.5
   num_pins_x: 20
@@ -1880,18 +1481,6 @@ QFN-100-1EP_12x12mm_P0.4mm:
   # EP_paste_coverage: 0.65
   EP_num_paste_pads: [2, 2]
 
-  thermal_vias:
-    count: [2, 2]
-    drill: 0.2
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    # EP_num_paste_pads: [2, 2]
-    paste_between_vias: 1
-    paste_rings_outside: 1
-    #EP_paste_coverage: 0.75
-    grid: [0.85, 0.85]
-    # bottom_pad_size:
-    paste_avoid_via: True
 
   pitch: 0.4
   num_pins_x: 25
