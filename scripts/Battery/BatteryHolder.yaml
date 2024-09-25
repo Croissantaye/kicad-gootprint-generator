@@ -87,6 +87,19 @@ BatteryHolder_Keystone_1022_2xAAA:
          ["smd", "4",  5.461,  27.5717, 5.08, 6.35, 0.0],
          ["npth", "", 10.0838, 24.3967, 2, 0, 2]]
 
+BatteryHolder_Keystone_1024_1xAA:
+  library_name: "Battery"
+  description: "Keystone Battery Holder, 1024, 1088, Battery Type 1xAA"
+  datasheet: "http://www.keyelco.com/product.cfm/product_id/936, https://www.keyelco.com/product.cfm/product_id/14051"
+  tags: "Keystone Battery Holder, 1024, 1088, Battery Type 1xAA"
+  extratexts: [[-0.05, 37.1277, "+", "F.SilkS", 3.0, 3.0]]
+  at: [-7.7724, 29.9593]
+  size: [15.5448, 59.9186]
+  smd_tht: "smd"
+  pins: [["smd", "1", 0,  31.1277, 6.35, 7.3406, 0.0],
+         ["smd", "2", 0, -31.1277, 6.35, 7.3406, 0.0],
+         ["npth", "", 6.731, 27.4574, 2, 0, 2]]
+
 BatteryHolder_Keystone_1042_1x18650:
   library_name: "Battery"
   description: "Keystone Battery Holder, 1042, Battery Type 1x18650"
