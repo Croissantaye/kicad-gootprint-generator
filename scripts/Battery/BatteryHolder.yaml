@@ -58,6 +58,22 @@ BatteryHolder_Bulgin_BX0123_1xCR123:
   size: [41.3, 20.0]
   pins: [["tht", "1", 0, 0, 3.0, 3.0, 1.6], ["tht", "2", 37.8, 0, 3.0, 3.0, 1.6], ["npth", "", 10.425, 0, 3.2, 0, 3.2], ["npth", "", 27.375, 0, 3.2, 0, 3.2]]
 
+BatteryHolder_Keystone_1012_2xAA:
+  library_name: "Battery"
+  description: "Keystone Battery Holder, 1012, 1090, Battery Type 2xAA"
+  datasheet: "http://www.keyelco.com/product.cfm/product_id/931, https://www.keyelco.com/product.cfm/product_id/14053"
+  tags: "Keystone Battery Holder, 1012, 1090, Battery Type 2xAA"
+  extratexts: [[-7.1636,  37.1277, "+", "F.SilkS", 3.0, 3.0],
+               [ 7.1636, -37.1277, "+", "F.SilkS", 3.0, 3.0]]
+  at: [-14.986, 29.9593]
+  size: [29.972, 59.9186]
+  smd_tht: "smd"
+  pins: [["smd", "1", -7.2136,  31.1277, 6.35, 7.3406, 0.0],
+         ["smd", "2", -7.2136, -31.1277, 6.35, 7.3406, 0.0],
+         ["smd", "3",  7.2136, -31.1277, 6.35, 7.3406, 0.0],
+         ["smd", "4",  7.2136,  31.1277, 6.35, 7.3406, 0.0],
+         ["npth", "", 13.9446,  27.4574, 2, 0, 2]]
+
 BatteryHolder_Keystone_1020_1xAAA:
   library_name: "Battery"
   description: "Keystone Battery Holder, 1020, 1076, Battery Type 1xAAA"
