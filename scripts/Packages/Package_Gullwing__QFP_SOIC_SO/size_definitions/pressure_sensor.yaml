@@ -23,7 +23,7 @@ CFSensor_XGZP6859D:
     nominal: 7.0
     tolerance: 0.1 # guess
   overall_height: # Excluding pressure port
-    nominal: 3.6 # 9.6-6.0
+    nominal: 3.5 # 9.5-6.0
     tolerance: 0.1 # guess
 
   overall_size_x:
