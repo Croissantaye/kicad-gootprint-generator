@@ -136,9 +136,6 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     t_short = 0.75 #short side (fixed at 5mm)
     t_long = 0.5 #long side, from CNJM datasheet
 
-    #draw simple outline on F.Fab layer
-    kicad_mod.append(RectLine(start=[x1,y1],end=[x2,y2],layer='F.Fab',width=configuration['fab_line_width']))
-    
     ########################### CrtYd #################################
     # Courtyard from conn_jst_PHD_vertical.py, modified to include pads
     cx1 = roundToBase(x1-configuration['courtyard_offset']['connector'], configuration['courtyard_grid'])
@@ -152,7 +149,7 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
         layer='F.CrtYd', width=configuration['courtyard_line_width']))
 
     #draw silk polarity lines
-    kicad_mod.append(RectLine(start=[x1+t_short,y1+t_long],end=[x2-t_short,y2-t_long],layer='F.Fab',width=configuration['silk_line_width']))
+    kicad_mod.append(RectLine(start=[x1+t_short,y1+t_long],end=[x2-t_short,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
 
     #offset off
     off = configuration['silk_fab_offset']
