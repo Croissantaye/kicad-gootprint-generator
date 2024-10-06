@@ -185,6 +185,22 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
 
     #draw silk outline
     kicad_mod.append(RectLine(start=[x1,y1],end=[x2,y2],width=configuration['silk_line_width'],layer='F.SilkS'))
+    
+    # Pin 1 marker arrow
+    
+    marker_xofs = 1.0
+    marker_x_coord = x_pad_position(1, n_positions) - marker_xofs
+    marker_y_coord = y_pad_position(1, n_positions)
+    
+    marker_size = 0.4
+    marker = [
+        {'x': marker_x_coord,'y': marker_y_coord},
+        {'x': marker_x_coord-2*marker_size,'y': marker_y_coord+marker_size},
+        {'x': marker_x_coord-2*marker_size,'y': marker_y_coord-marker_size},
+        {'x': marker_x_coord,'y': marker_y_coord}
+    ]
+
+    kicad_mod.append(PolygonLine(polygon=marker, width=configuration['silk_line_width'], layer='F.SilkS'))
 
     ## create pads (and some numbers on silk for orientation)
     #fontsize = 0.75
