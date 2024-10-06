@@ -196,7 +196,21 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     kicad_mod.append(Line(start=[x1, y1], end=[left_silk_end_x, y1], width=configuration['silk_line_width'], layer='F.SilkS'))
     kicad_mod.append(Line(start=[x1, y2], end=[left_silk_end_x, y2], width=configuration['silk_line_width'], layer='F.SilkS'))
     
-    # Create lines
+    # Right side is just symmetrical (but we use the rightmost pad's X coords)
+    right_silk_end_x = x_pad_position(n_positions*2, n_positions) + pad_silk_xofs
+    
+    kicad_mod.append(Line(start=[x2, y1], end=[right_silk_end_x, y1], width=configuration['silk_line_width'], layer='F.SilkS'))
+    kicad_mod.append(Line(start=[x2, y2], end=[right_silk_end_x, y2], width=configuration['silk_line_width'], layer='F.SilkS'))
+    
+    # Add a short line between every two pads
+    for i in range(1, n_positions*2+1):
+        # Same row, different columns => i+2
+        start_x = x_pad_position(i, n_positions) + pad_silk_xofs
+        stop_x = x_pad_position(i+2, n_positions) - pad_silk_xofs
+        # Add top and bottom lines
+        kicad_mod.append(Line(start=[start_x, y1], end=[stop_x, y1], width=configuration['silk_line_width'], layer='F.SilkS'))
+        kicad_mod.append(Line(start=[start_x, y2], end=[stop_x, y2], width=configuration['silk_line_width'], layer='F.SilkS'))
+        
     
     ########### Marker ############
     # Pin 1 marker arrow
