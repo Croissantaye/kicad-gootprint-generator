@@ -109,7 +109,6 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     for i in range(1, (n_positions*2)+1):
         x = x_pad_position(i, n_positions)
         y = y_pad_position(i, n_positions)
-        print(f"Pad {i}: {x}, {y}")
         kicad_mod.append(Pad(number=i, type=Pad.TYPE_CONNECT, shape=Pad.SHAPE_ROUNDRECT,
             at=[x, y], size=list(pad_size), layers=Pad.LAYERS_CONNECT_FRONT)
         )
