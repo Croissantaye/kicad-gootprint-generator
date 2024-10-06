@@ -230,45 +230,22 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
 
     kicad_mod.append(PolygonLine(polygon=marker, width=configuration['silk_line_width'], layer='F.SilkS'))
 
-    ## create pads (and some numbers on silk for orientation)
-    #fontsize = 0.75
-    #start = -V[positions] / 2
-    #for i in range(0, positions):
-    #    off = 4.0 - pad_pitch if W[positions] and i > W[positions] else 0.0
-    #    for idx, layer in enumerate([Pad.LAYERS_CONNECT_FRONT, Pad.LAYERS_CONNECT_BACK]):
-    #        kicad_mod.append(Pad(number=2 * i + idx + 1, type=Pad.TYPE_CONNECT, shape=Pad.SHAPE_RECT,
-    #                             at=[start + i * pad_pitch + off, bot - 3.8 + pad_size[1]/2], size=pad_size, layers=layer))
-    #    if (i in [0, positions - 1]) or (W[positions] and (i - W[positions]) in [0, 1]):
-    #        align = 0 if (i == 0 or i - 1 == W[positions]) else 1
-    #        for idx, layer in enumerate(['F.SilkS', 'B.SilkS']):
-    #            lbl = '%d' % (2 * i + idx + 1)
-    #            kicad_mod.append(Text(text=lbl, at=[start + i * pad_pitch + off + (-1)**align * fontsize * (len(lbl) - 1) / 2, bot - 3.8 - fontsize], layer=layer, mirror=idx, size=[fontsize, fontsize]))
-
-    ## create some useful additional information on User.Comments layer
-    # kicad_mod.append(Text(text="Chamfer 30 degree 0.45 mm", at=[0, bot - 0.44], layer='Cmts.User', size=[fontsize, fontsize]))
-    # if ('-BL' in option):
-    #     mate_distance = zip([1.8], ['ref'])
-    # else:
-    #     mate_distance = zip([2.05, 3.69], ['min', 'max'])
-    # for dist, name in mate_distance: # see https://suddendocs.samtec.com/prints/hsec8%20mated%20document-mkt.pdf Table 1
-    #     kicad_mod.append(Line(start=[body_edge['left'], body_edge['bottom'] + dist], end=[body_edge['left'] + 2.5, body_edge['bottom'] + dist], width=configuration['fab_line_width'], layer='Cmts.User'))
-    #     kicad_mod.append(Text(text="mated PCB distance: %.2f mm (%s)" % (dist, name), at=[left + 3, bot + dist], layer='Cmts.User', size=[fontsize, fontsize], justify='left'))
-
-    # TODO: add keepout area on inner layers near chamfered edges
-    # this requires to create a new Zone node in the KicadModTree to add something like:
-    #
-    #  kicad_mod.append(Zone(nodes=[[-Y[positions] / 2, bot - 1.0], [Y[positions] / 2, bot - 1.0], [Y[positions] / 2, bot], [-Y[positions] / 2, bot]], layer='Inner Layers', etc etc))
-    #
-
     ######################### Text Fields ###############################
     addTextFields(kicad_mod=kicad_mod, configuration=configuration, body_edges=body_edge,
         courtyard={'top':cy1, 'bottom':cy2}, fp_name=fp_name, text_y_inside_position='center')
+    
+    model3d_path_prefix = configuration.get('3d_model_prefix','${KICAD8_3DMODEL_DIR}/')
+
 
     lib_name = configuration['lib_name_specific_function_format_string'].format(category=lib_name_category)
     output_dir = '{lib_name:s}.pretty/'.format(lib_name=lib_name)
     if not os.path.isdir(output_dir): #returns false if path does not yet exist!! (Does not check path validity)
         os.makedirs(output_dir)
     filename =  '{outdir:s}{fp_name:s}.kicad_mod'.format(outdir=output_dir, fp_name=fp_name)
+    
+    model_name = '{model3d_path_prefix:s}{lib_name:s}.3dshapes/{fp_name:s}.wrl'.format(
+        model3d_path_prefix=model3d_path_prefix, lib_name=lib_name, fp_name=fp_name)
+    kicad_mod.append(Model(filename=model_name))
 
     # write file
     file_handler = KicadFileHandler(kicad_mod)
