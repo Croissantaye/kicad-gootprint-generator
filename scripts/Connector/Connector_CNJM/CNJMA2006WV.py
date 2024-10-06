@@ -160,19 +160,19 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     #draw silk keying/polarity marks measured from 3D model on JST's site
     # from bottom (pin 2 row) of connector, notches are 1.6mm up and 0.8mm wide
     # NOTE: Drawn on Fab layer as this is a SMD part family
-    kicad_mod.append(Line(start=[x1-off,y2-2.4],end=[x1+t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2+off,y2-2.4],end=[x2-t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x1-off,y2-1.6],end=[x1+t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2+off,y2-1.6],end=[x2-t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1,y2-2.4],end=[x1+t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2,y2-2.4],end=[x2-t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1,y2-1.6],end=[x1+t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2,y2-1.6],end=[x2-t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
     # from sides, inner edge of notches are 3.42mm inside and 0.94mm wide at the top (pin 1 row) and 1.50mm wide at the bottom (pin 2 row)
-    kicad_mod.append(Line(start=[x1+3.42,y1-off],end=[x1+3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x1+2.48,y1-off],end=[x1+2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2-3.42,y1-off],end=[x2-3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2-2.48,y1-off],end=[x2-2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x1+3.42,y2+off],end=[x1+3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x1+1.92,y2+off],end=[x1+1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2-3.42,y2+off],end=[x2-3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2-1.92,y2+off],end=[x2-1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+3.42,y1],end=[x1+3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+2.48,y1],end=[x1+2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-3.42,y1],end=[x2-3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-2.48,y1],end=[x2-2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+3.42,y2],end=[x1+3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+1.92,y2],end=[x1+1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-3.42,y2],end=[x2-3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-1.92,y2],end=[x2-1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
     
     # Draw silk orientation lines outside the part
     indicator_xofs = 0.35
