@@ -173,8 +173,8 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     
     # Draw silk orientation lines outside the part
     indicator_xofs = 0.35
-    kicad_mod.append(Line(start=[x1-indicator_xofs,y2-2.4],end=[x1-indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['fab_line_width']))
-    kicad_mod.append(Line(start=[x2+indicator_xofs,y2-2.4],end=[x2+indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1-indicator_xofs,y2-2.4],end=[x1-indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['silk_line_width']))
+    kicad_mod.append(Line(start=[x2+indicator_xofs,y2-2.4],end=[x2+indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['silk_line_width']))
 
     x1 -= off
     y1 -= off
