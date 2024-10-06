@@ -4,7 +4,7 @@ group_definitions:
 device_definition:
     VH_top_entry:
         series: 'VH'
-        mpn_format_string: 'ZX-VH3.96{pincount:d}PLT'
+        mpn_format_string: 'ZX-VH3.96-{pincount:d}PLT'
         orientation: 'V'
         datasheet: 'https://www.lcsc.com/datasheet/lcsc_datasheet_2306191414_Megastar-ZX-VH3-96-4PLT_C7429652.pdf'
         pinrange: ['range', [2, 11]]
