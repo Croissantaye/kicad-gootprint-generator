@@ -76,6 +76,9 @@ def component_size(n_positions):
     """Component size (F.Fab layer)"""
     return Size(overall_width(n_positions), 5.3)
 
+def roundToBase(value, base):
+    return round(value/base) * base
+
 def generate_one_footprint(n_positions: int, variant: str, configuration):
     fp_name = f'CNJM_CNJMA_2006WV-S-2x{n_positions:02d}_P2.0mm'
 
@@ -100,7 +103,7 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     #for layer in ['F.CrtYd', 'B.CrtYd']:
     #    kicad_mod.append(RectLine(start=[left, top], end=[right, bot], layer=layer, width=configuration['courtyard_line_width']))
     
-    # Create Pads. NOTE: For n_positions=3, we create 6 pads!
+    # Create Pads. NOTE: For n_positions=3, we create 6 pads, since this is a 2xN footprint
     for i in range(1, (n_positions*2)+1):
         x = x_pad_position(i, n_positions)
         y = y_pad_position(i, n_positions)
@@ -108,6 +111,80 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
         kicad_mod.append(Pad(number=i, type=Pad.TYPE_CONNECT, shape=Pad.SHAPE_ROUNDRECT,
             at=[x, y], size=list(pad_size), layers=Pad.LAYERS_CONNECT_FRONT)
         )
+    
+    ####
+    #### Silkscreen etc
+    #### Copied from conn_jst_PHD_vertical.py
+    ####
+    
+    #calculate fp dimensions
+    pitch = 2.0
+    A = (n_positions - 1) * pitch
+    B = A + 4.0   # Total width
+    
+    body_size = Size(B, 5.3)
+
+    #draw the component outline
+    x1 = -B/2.0
+    x2 = B/2.0
+    y2 = body_size.y/2
+    y1 = -y2
+    body_edge={'left':x1, 'right':x2, 'top':y1, 'bottom':y2}
+    
+    #wall thickness
+    t_short = 0.75 #short side (fixed at 5mm)
+    t_long = 0.5 #long side, from CNJM datasheet
+
+    #draw simple outline on F.Fab layer
+    kicad_mod.append(RectLine(start=[x1,y1],end=[x2,y2],layer='F.Fab',width=configuration['fab_line_width']))
+    
+    ########################### CrtYd #################################
+    # Courtyard from conn_jst_PHD_vertical.py, modified to include pads
+    cx1 = roundToBase(x1-configuration['courtyard_offset']['connector'], configuration['courtyard_grid'])
+    cy1 = roundToBase(y1-configuration['courtyard_offset']['connector'] - pad_size.y + 0.25, configuration['courtyard_grid'])
+
+    cx2 = roundToBase(x2+configuration['courtyard_offset']['connector'], configuration['courtyard_grid'])
+    cy2 = roundToBase(y2+configuration['courtyard_offset']['connector'] + pad_size.y - 0.25, configuration['courtyard_grid'])
+    
+    kicad_mod.append(RectLine(
+        start=[cx1, cy1], end=[cx2, cy2],
+        layer='F.CrtYd', width=configuration['courtyard_line_width']))
+
+    #draw silk polarity lines
+    kicad_mod.append(RectLine(start=[x1+t_short,y1+t_long],end=[x2-t_short,y2-t_long],layer='F.Fab',width=configuration['silk_line_width']))
+
+    #offset off
+    off = configuration['silk_fab_offset']
+
+    #draw silk keying/polarity marks measured from 3D model on JST's site
+    # from bottom (pin 2 row) of connector, notches are 1.6mm up and 0.8mm wide
+    # NOTE: Drawn on Fab layer as this is a SMD part family
+    kicad_mod.append(Line(start=[x1-off,y2-2.4],end=[x1+t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2+off,y2-2.4],end=[x2-t_short,y2-2.4],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1-off,y2-1.6],end=[x1+t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2+off,y2-1.6],end=[x2-t_short,y2-1.6],layer='F.Fab',width=configuration['fab_line_width']))
+    # from sides, inner edge of notches are 3.42mm inside and 0.94mm wide at the top (pin 1 row) and 1.50mm wide at the bottom (pin 2 row)
+    kicad_mod.append(Line(start=[x1+3.42,y1-off],end=[x1+3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+2.48,y1-off],end=[x1+2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-3.42,y1-off],end=[x2-3.42,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-2.48,y1-off],end=[x2-2.48,y1+t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+3.42,y2+off],end=[x1+3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x1+1.92,y2+off],end=[x1+1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-3.42,y2+off],end=[x2-3.42,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2-1.92,y2+off],end=[x2-1.92,y2-t_long],layer='F.Fab',width=configuration['fab_line_width']))
+    
+    # Draw silk orientation lines outside the part
+    indicator_xofs = 0.35
+    kicad_mod.append(Line(start=[x1-indicator_xofs,y2-2.4],end=[x1-indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['fab_line_width']))
+    kicad_mod.append(Line(start=[x2+indicator_xofs,y2-2.4],end=[x2+indicator_xofs,y2-1.6],layer='F.SilkS',width=configuration['fab_line_width']))
+
+    x1 -= off
+    y1 -= off
+    x2 += off
+    y2 += off
+
+    #draw silk outline
+    kicad_mod.append(RectLine(start=[x1,y1],end=[x2,y2],width=configuration['silk_line_width'],layer='F.SilkS'))
 
     ## create pads (and some numbers on silk for orientation)
     #fontsize = 0.75
@@ -140,8 +217,8 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     #
 
     ######################### Text Fields ###############################
-    #addTextFields(kicad_mod=kicad_mod, configuration=configuration, body_edges=body_edge,
-    #              courtyard={'top':cy1, 'bottom':cy2}, fp_name=fp_name, text_y_inside_position=-2.54)
+    addTextFields(kicad_mod=kicad_mod, configuration=configuration, body_edges=body_edge,
+        courtyard={'top':cy1, 'bottom':cy2}, fp_name=fp_name, text_y_inside_position='center')
 
     lib_name = configuration['lib_name_specific_function_format_string'].format(category=lib_name_category)
     output_dir = '{lib_name:s}.pretty/'.format(lib_name=lib_name)
