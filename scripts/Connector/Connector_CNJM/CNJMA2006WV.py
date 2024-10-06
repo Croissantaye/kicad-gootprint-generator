@@ -35,6 +35,8 @@ pad_pitch = 2.0
 
 from collections import namedtuple
 
+datasheet = "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CNJM-CNJMA2006WV-S-2X8P_C2834695.pdf"
+
 class Size(namedtuple('Size', ['x', 'y'])):
     def to_rect_line(self, layer='F.Fab', width=0.1):
         """
@@ -85,7 +87,7 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     print("%s" % fp_name)
     kicad_mod = Footprint(fp_name, FootprintType.UNSPECIFIED)
 
-    description = f"Dual-row 2.0mm SMD connector, 2x{n_positions:02d} contacts, 6.2mm height"
+    description = f"Dual-row 2.0mm SMD connector, 2x{n_positions:02d} contacts, 6.2mm height {datasheet}"
     #set the FP description
     kicad_mod.setDescription(description)
 
