@@ -82,7 +82,7 @@ def roundToBase(value, base):
     return round(value/base) * base
 
 def generate_one_footprint(n_positions: int, variant: str, configuration):
-    fp_name = f'CNJM_CNJMA_2006WV-S-2x{n_positions:02d}_P2.0mm'
+    fp_name = f'CNJM_CNJMA2006WV-S-2x{n_positions:02d}_P2.0mm'
 
     print("%s" % fp_name)
     kicad_mod = Footprint(fp_name, FootprintType.UNSPECIFIED)
@@ -205,6 +205,9 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     
     # Add a short line between every two pads
     for i in range(1, n_positions*2+1):
+        # Ignore every 2nd pad, since we draw both top and bottom at once
+        if i % 2 == 0:
+            continue
         # Same row, different columns => i+2
         start_x = x_pad_position(i, n_positions) + pad_silk_xofs
         stop_x = x_pad_position(i+2, n_positions) - pad_silk_xofs
