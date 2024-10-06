@@ -184,8 +184,21 @@ def generate_one_footprint(n_positions: int, variant: str, configuration):
     y2 += off
 
     #draw silk outline
-    kicad_mod.append(RectLine(start=[x1,y1],end=[x2,y2],width=configuration['silk_line_width'],layer='F.SilkS'))
+    # Vertical lines are the same as in a [x1,y1] to [x2,y2] rectangle
+    # but the horizontal lines need to be broken at the pads
+    kicad_mod.append(Line(start=[x1,y1],end=[x1,y2],width=configuration['silk_line_width'],layer='F.SilkS'))
+    kicad_mod.append(Line(start=[x2,y1],end=[x2,y2],width=configuration['silk_line_width'],layer='F.SilkS'))
     
+    # Create lines from corner to leftmost pad (1)
+    pad_silk_xofs = pad_size.x/2 + 0.3 # from pad centerpoint. 0.25 is clearance
+    left_silk_end_x = x_pad_position(1, n_positions) - pad_silk_xofs
+    
+    kicad_mod.append(Line(start=[x1, y1], end=[left_silk_end_x, y1], width=configuration['silk_line_width'], layer='F.SilkS'))
+    kicad_mod.append(Line(start=[x1, y2], end=[left_silk_end_x, y2], width=configuration['silk_line_width'], layer='F.SilkS'))
+    
+    # Create lines
+    
+    ########### Marker ############
     # Pin 1 marker arrow
     
     marker_xofs = 1.0
