@@ -2,6 +2,28 @@ group_definitions:
     manufacturer: 'Zhaoxing'
 
 device_definition:
+    XH_top_entry:
+        series: 'XH'
+        mpn_format_string: 'ZX-XH2.54-{pincount:d}PLT'
+        orientation: 'V'
+        datasheet: 'https://www.lcsc.com/datasheet/lcsc_datasheet_2306191415_Megastar-ZX-XH2-54-2PLT_C7429680.pdf'
+        pinrange: ['range', [2, 17]]
+        text_inside_pos: -1
+        pitch: 2.50
+        pad1_position: 'top-left' # 'top-left' | 'bottom-left' -> pin 2 always to the right of pin 1
+        mounting_pad_size: [1.5, 3] # From datasheet
+        # x position mounting inner mounting pad edge relative to nearest pad center
+        center_pad_to_mounting_pad_edge: 2.35 # from datasheet
+        # y dimensions for pad given relative to mounting pad edge
+        rel_pad_y_outside_edge: 8 # Tuned to achieve 5.5mm long pad
+        rel_pad_y_inside_edge: 2.5 # 8.0[datasheet]-5.5[padlen]
+        pad_size_x: 1.20 # from datasheet
+        # y position for body edge relative to mounting pad edge (positive -> body extends outside bounding box)
+        rel_body_edge_y: 0.65 # Estimated
+        body_size_y: 5.95
+        # x body edge relative to nearest pin
+        rel_body_edge_x: 3.5
+
     VH_top_entry:
         series: 'VH'
         mpn_format_string: 'ZX-VH3.96-{pincount:d}PLT'
