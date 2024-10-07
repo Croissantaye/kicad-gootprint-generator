@@ -22,7 +22,7 @@ device_definition:
         rel_body_edge_y: 0.65 # Estimated
         body_size_y: 5.95
         # x body edge relative to nearest pin
-        rel_body_edge_x: 3.5
+        rel_body_edge_x: 3.75
 
     VH_top_entry:
         series: 'VH'
