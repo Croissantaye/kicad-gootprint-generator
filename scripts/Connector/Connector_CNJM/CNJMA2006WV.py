@@ -82,7 +82,7 @@ def roundToBase(value, base):
     return round(value/base) * base
 
 def generate_one_footprint(n_positions: int, variant: str, configuration):
-    fp_name = f'CNJM_CNJMA2006WV-S-2x{n_positions:02d}_P2.0mm'
+    fp_name = f'CNJM_CNJMA2006WV-S-2x{n_positions:d}_P2.0mm'
 
     print("%s" % fp_name)
     kicad_mod = Footprint(fp_name, FootprintType.UNSPECIFIED)
