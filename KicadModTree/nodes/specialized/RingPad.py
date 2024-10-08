@@ -457,7 +457,7 @@ class RingPad(Node):
             pos.rotate(a)
             self.pads.append(Pad(number=self.number,
                                  type=Pad.TYPE_SMT, shape=Pad.SHAPE_CIRCLE,
-                                 at=(self.at+pos), 
+                                 at=(self.at+pos),
                                  size=self.width-(2*self.anchor_to_edge_clearance),
                                  layers=['F.Cu'],
                                  ))
