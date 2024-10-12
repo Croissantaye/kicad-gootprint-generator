@@ -384,10 +384,10 @@ class NoLeadGenerator(FootprintGenerator):
             pincount_full = device_params['pin_count']
             pincount_text = '{}'.format(pincount_full)
             pincount = pincount_full
-        elif 'hidden_pins' in device_params:
+        elif 'hidden_pins' in device_params and len(device_params['hidden_pins'])>0):
             pincount_text = '{}-{}'.format(pincount_full - len(device_params['hidden_pins']), pincount_full)
             pincount = pincount_full - len(device_params['hidden_pins'])
-        elif 'deleted_pins' in device_params:
+        elif 'deleted_pins' in device_params and len(device_params['deleted_pins'])>0:
             pincount_text = '{}-{}'.format(pincount_full, pincount_full - len(device_params['deleted_pins']))
             pincount = pincount_full - len(device_params['deleted_pins'])
         else:
