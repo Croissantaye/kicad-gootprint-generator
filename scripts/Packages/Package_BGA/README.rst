@@ -94,6 +94,18 @@ In addition to the above, package definitions can use the following, optional pa
 ``row_names``
     Contains a list with names to be used instead of the default IPC row names ('A', 'B', 'C', ..., 'AA', 'AB', ...)
 
+``row_name_prefix``
+    Contains an optional prefix that is added before all row names. Useful for BGAs with multiple pad grids that label
+    the rows of one of the grids something like "1A, 1B, ...".
+
+``first_row``
+    The name of the first row of the layout. This is useful if you want to nest multiple ball grids in a complex BGA,
+    and not all of them start their rows with "A". Takes a string that must match one of the row names. If you give a
+    list of custom ``row_names``, when given, ``first_row`` must be one of them.
+
+``first_column``
+    Like ``first_row`` above, but for columns. Takes a number.
+
 ``row_skips``
     Defines pads to omit from the generated footprint. The value of this is a list with one element per row. Each
     element is itself another list. Inside this nested list can be either integers defining pad numbers (according to
@@ -117,6 +129,9 @@ In addition to the above, package definitions can use the following, optional pa
     adjacent balls form an equilateral triangle. When ``staggered`` and ``pitch`` are given, the pitch gives the side
     length of that triangle, and its height that is used for row (or column) spacing is calculated automatically. You
     can override this by manually giving both ``pitch_x`` and ``pitch_y``.
+
+    This option can also be used to create normal ball grids that omit every other ball in a checkerboard-like pattern
+    by setting both ``pitch_x`` and ``pitch_y`` to the grid's pitch.
 
 ``first_ball``
     This option is used together with ``staggered`` to define staggered layouts. It expresses that every second pad
