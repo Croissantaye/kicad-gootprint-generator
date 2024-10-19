@@ -61,6 +61,8 @@ WLCSP-12_1.403x1.555mm_P0.4mm_Stagger:
   layout_y: 4
   row_skips: [[2, 4, 6], [1, 3, 5], [2, 4, 6], [1, 3, 5]]
 ST_WLCSP-12_1.70x1.42mm_P0.35mm_Stagger:
+  compatible_mpns:
+    - "STM32C011D6Yx"
   description: "ST WLCSP-12, ST Die ID 443"
   size_source: "https://www.st.com/resource/en/datasheet/stm32c011d6.pdf"
   body_size_x: 1.70
@@ -74,6 +76,9 @@ ST_WLCSP-12_1.70x1.42mm_P0.35mm_Stagger:
   layout_x: 4
   layout_y: 6
 ST_WLCSP-18_1.86x2.14mm_P0.4mm_Stagger:
+  compatible_mpns:
+    - "STM32G031Y8Yx"
+    - "STM32G041Y8Yx"
   description: "ST WLCSP-18, ST Die ID 466"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g031y8.pdf"
   body_size_x: 1.86
@@ -87,6 +92,9 @@ ST_WLCSP-18_1.86x2.14mm_P0.4mm_Stagger:
   layout_x: 7
   layout_y: 5
 ST_WLCSP-20_1.94x2.40mm_Layout4x5_P0.4mm:
+  compatible_mpns:
+    - "STM32G051F8Yx"
+    - "STM32G061F8Yx"
   description: "ST WLCSP-20, ST die ID 456"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g051f8.pdf#page=102"
   body_size_x: 1.94
@@ -98,6 +106,11 @@ ST_WLCSP-20_1.94x2.40mm_Layout4x5_P0.4mm:
   layout_x: 4
   layout_y: 5
 ST_WLCSP-25_Die425:
+  compatible_mpns:
+    - "STM32L031E_4-6_Yx"
+    - "STM32L031E4Yx"
+    - "STM32L031E6Yx"
+    - "STM32L041E6Yx"
   description: "WLCSP-25"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l031f6.pdf#page=112"
   body_size_x: 2.097
@@ -109,6 +122,9 @@ ST_WLCSP-25_Die425:
   layout_x: 5
   layout_y: 5
 ST_WLCSP-25_Die444:
+  compatible_mpns:
+    - "STM32F031E6Yx"
+    - "STM32F038E6Yx"
   description: "WLCSP-25"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f031k6.pdf#page=93"
   body_size_x: 2.423
@@ -120,6 +136,10 @@ ST_WLCSP-25_Die444:
   layout_x: 5
   layout_y: 5
 ST_WLCSP-25_Die457:
+  compatible_mpns:
+    - "STM32L011E_3-4_Yx"
+    - "STM32L011E3Yx"
+    - "STM32L011E4Yx"
   description: "WLCSP-25"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l011k3.pdf#page=100"
   body_size_x: 2.133
@@ -131,6 +151,8 @@ ST_WLCSP-25_Die457:
   layout_x: 5
   layout_y: 5
 ST_WLCSP-25_2.33x2.24mm_Layout5x5_P0.4mm:
+  compatible_mpns:
+    - "STM32H503EBYx"
   description: "ST WLCSP-25, ST Die ID 474"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h503eb.pdf"
   body_size_x: 2.33
@@ -142,6 +164,9 @@ ST_WLCSP-25_2.33x2.24mm_Layout5x5_P0.4mm:
   layout_x: 5
   layout_y: 5
 ST_WLCSP-27_2.34x2.55mm_P0.40mm_Stagger:
+  compatible_mpns:
+    - "STM32U031G6Yx"
+    - "STM32U031G8Yx"
   description: "ST WLCSP-27, ST Die ID 459"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u031g6.pdf"
   body_size_x: 2.34
@@ -165,6 +190,14 @@ Maxim_WLCSP-35_3.0x2.17mm_Layout7x5_P0.4mm_Ball0.27mm_Pad0.25mm:
   layout_x: 7
   layout_y: 5
 ST_WLCSP-36_Die417:
+  compatible_mpns:
+    - "STM32L051T_6-8_Yx"
+    - "STM32L051T6Yx"
+    - "STM32L051T8Yx"
+    - "STM32L052T_6-8_Yx"
+    - "STM32L052T6Yx"
+    - "STM32L052T8Yx"
+    - "STM32L052T8Fx"
   description: "WLCSP-36"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l052t8.pdf#page=123"
   body_size_x: 2.61
@@ -176,6 +209,9 @@ ST_WLCSP-36_Die417:
   layout_x: 6
   layout_y: 6
 ST_WLCSP-36_Die440:
+  compatible_mpns:
+    - "STM32F051T8Yx"
+    - "STM32F058T8Yx"
   description: "WLCSP-36"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f051t8.pdf#page=103"
   body_size_x: 2.605
@@ -187,6 +223,9 @@ ST_WLCSP-36_Die440:
   layout_x: 6
   layout_y: 6
 ST_WLCSP-36_Die445:
+  compatible_mpns:
+    - "STM32F042T6Yx"
+    - "STM32F048T6Yx"
   description: "WLCSP-36"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f042k6.pdf#page=96"
   body_size_x: 2.605
@@ -198,6 +237,10 @@ ST_WLCSP-36_Die445:
   layout_x: 6
   layout_y: 6
 ST_WLCSP-36_Die458:
+  compatible_mpns:
+    - "STM32F410T_8-B_Yx"
+    - "STM32F410T8Yx"
+    - "STM32F410TBYx"
   description: "WLCSP-36"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f410t8.pdf#page=119"
   body_size_x: 2.553
@@ -209,6 +252,11 @@ ST_WLCSP-36_Die458:
   layout_x: 6
   layout_y: 6
 ST_WLCSP-42_2.93mmx2.82_P0.40mm_Stagger:
+  compatible_mpns:
+    - "STM32U073H8Yx"
+    - "STM32U073HBYx"
+    - "STM32U073HCYx"
+    - "STM32U083HCYx"
   description: "ST WLCSP-42, ST Die ID 489"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u073rc.pdf"
   body_size_x: 2.93
@@ -222,6 +270,11 @@ ST_WLCSP-42_2.93mmx2.82_P0.40mm_Stagger:
   layout_x: 12
   layout_y: 7
 ST_WLCSP-49_Die423:
+  compatible_mpns:
+    - "STM32F401C_B-C_Yx"
+    - "STM32F401CBYx"
+    - "STM32F401CCYx"
+    - "STM32F401CCFx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f401vc.pdf#page=115"
   body_size_x: 2.965
@@ -233,6 +286,10 @@ ST_WLCSP-49_Die423:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die431:
+  compatible_mpns:
+    - "STM32F411C_C-E_Yx"
+    - "STM32F411CCYx"
+    - "STM32F411CEYx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f411vc.pdf#page=124"
   body_size_x: 2.999
@@ -244,6 +301,10 @@ ST_WLCSP-49_Die431:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die433:
+  compatible_mpns:
+    - "STM32F401C_D-E_Yx"
+    - "STM32F401CDYx"
+    - "STM32F401CEYx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f401ce.pdf#page=116"
   body_size_x: 3.029
@@ -255,6 +316,15 @@ ST_WLCSP-49_Die433:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die435:
+  compatible_mpns:
+    - "STM32L431C_B-C_Yx"
+    - "STM32L431CBYx"
+    - "STM32L431CCYx"
+    - "STM32L433C_B-C_Yx"
+    - "STM32L433CBYx"
+    - "STM32L433CCYx"
+    - "STM32L443CCFx"
+    - "STM32L443CCYx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/DM00257211.pdf#page=191"
   body_size_x: 3.141
@@ -266,6 +336,9 @@ ST_WLCSP-49_Die435:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die438:
+  compatible_mpns:
+    - "STM32F303C8Yx"
+    - "STM32F334C8Yx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f303r8.pdf#page=112"
   body_size_x: 3.89
@@ -277,6 +350,10 @@ ST_WLCSP-49_Die438:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die439:
+  compatible_mpns:
+    - "STM32F301C8Yx"
+    - "STM32F302C8Yx"
+    - "STM32F318C8Yx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f301r8.pdf#page=117"
   body_size_x: 3.417
@@ -288,6 +365,16 @@ ST_WLCSP-49_Die439:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die447:
+  compatible_mpns:
+    - "STM32L071C_B-Z_Yx"
+    - "STM32L071CBYx"
+    - "STM32L071CZYx"
+    - "STM32L072C_B-Z_Yx"
+    - "STM32L072CBYx"
+    - "STM32L072CZYx"
+    - "STM32L072CZEx"
+    - "STM32L082CZYx"
+    - "STM32L073CZYx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l072kz.pdf#page=134"
   body_size_x: 3.294
@@ -299,6 +386,10 @@ ST_WLCSP-49_Die447:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_Die448:
+  compatible_mpns:
+    - "STM32F071CBYx"
+    - "STM32F072CBYx"
+    - "STM32F078CBYx"
   description: "WLCSP-49"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f071v8.pdf#page=106"
   body_size_x: 3.277
@@ -310,6 +401,9 @@ ST_WLCSP-49_Die448:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-52_3.09x3.15mm_P0.4mm_Stagger:
+  compatible_mpns:
+    - "STM32G0B1NEYx"
+    - "STM32G0C1NEYx"
   description: "ST WLCSP-52, ST die ID 467"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g0b1ne.pdf#page=136"
   body_size_x: 3.09
@@ -323,6 +417,10 @@ ST_WLCSP-52_3.09x3.15mm_P0.4mm_Stagger:
   layout_x: 13
   layout_y: 8
 ST_WLCSP-56_3.38x3.38mm_P0.4m_Stagger:
+  compatible_mpns:
+    - "STM32U535NCYxQ"
+    - "STM32U535NEYxQ"
+    - "STM32U545NEYxQ"
   description: "ST WLCSP-56, ST die ID 455"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u535je.pdf"
   body_size_x: 3.38
@@ -336,6 +434,9 @@ ST_WLCSP-56_3.38x3.38mm_P0.4m_Stagger:
   layout_x: 14
   layout_y: 8
 ST_WLCSP-63_Die427:
+  compatible_mpns:
+    - "STM32L151UCYx"
+    - "STM32L152UCYx"
   description: "WLCSP-63"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l151cc.pdf#page=125"
   body_size_x: 3.228
@@ -347,6 +448,11 @@ ST_WLCSP-63_Die427:
   layout_x: 7
   layout_y: 9
 ST_WLCSP-64_Die414:
+  compatible_mpns:
+    - "STM32F103R_C-D-E_Yx"
+    - "STM32F103RCYx"
+    - "STM32F103RDYx"
+    - "STM32F103REYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f103ze.pdf#page=120"
   body_size_x: 4.466
@@ -358,6 +464,8 @@ ST_WLCSP-64_Die414:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die427:
+  compatible_mpns:
+    - "STM32L151RCYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l152zc.pdf#page=126"
   body_size_x: 4.539
@@ -369,6 +477,14 @@ ST_WLCSP-64_Die427:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die435:
+  compatible_mpns:
+    - "STM32L431R_B-C_Yx"
+    - "STM32L431RBYx"
+    - "STM32L431RCYx"
+    - "STM32L433R_B-C_Yx"
+    - "STM32L433RBYx"
+    - "STM32L433RCYx"
+    - "STM32L443RCYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/DM00257211.pdf#page=188"
   body_size_x: 3.141
@@ -380,6 +496,10 @@ ST_WLCSP-64_Die435:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die436:
+  compatible_mpns:
+    - "STM32L151RDYx"
+    - "STM32L152RDYx"
+    - "STM32L162RDYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l152zd.pdf#page=143"
   body_size_x: 4.539
@@ -391,6 +511,13 @@ ST_WLCSP-64_Die436:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die441:
+  compatible_mpns:
+    - "STM32F412R_E-G_Yx"
+    - "STM32F412REYx"
+    - "STM32F412RGYx"
+    - "STM32F412R_E-G_YxP"
+    - "STM32F412REYxP"
+    - "STM32F412RGYxP"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/DM00213872.pdf#page=167"
   body_size_x: 3.623
@@ -402,6 +529,9 @@ ST_WLCSP-64_Die441:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die442:
+  compatible_mpns:
+    - "STM32F091RCYx"
+    - "STM32F098RCYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f091vb.pdf#page=109"
   body_size_x: 3.347
@@ -413,6 +543,15 @@ ST_WLCSP-64_Die442:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-64_Die462:
+  compatible_mpns:
+    - "STM32L451R_C-E_Yx"
+    - "STM32L451RCYx"
+    - "STM32L451REYx"
+    - "STM32L452R_C-E_Yx"
+    - "STM32L452RCYx"
+    - "STM32L452REYx"
+    - "STM32L452REYxP"
+    - "STM32L462REYx"
   description: "WLCSP-64"
   size_source: "http://www.st.com/resource/en/datasheet/DM00340475.pdf#page=189"
   body_size_x: 3.357
@@ -424,6 +563,11 @@ ST_WLCSP-64_Die462:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-66_Die411:
+  compatible_mpns:
+    - "STM32F205R_E-G_Yx"
+    - "STM32F205REYx"
+    - "STM32F205RGYx"
+    - "STM32F205RGEx"
   description: "WLCSP-66"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f207vg.pdf#page=154"
   body_size_x: 3.639
@@ -436,6 +580,8 @@ ST_WLCSP-66_Die411:
   layout_y: 9
   row_skips: [[], [], [[4, 7]], [[4, 7]], [[4, 7]], [[4, 7]], [[4, 7]], [], []]
 ST_WLCSP-66_Die432:
+  compatible_mpns:
+    - "STM32F378RCYx"
   description: "WLCSP-66"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f378vc.pdf#page=114"
   body_size_x: 3.767
@@ -448,6 +594,12 @@ ST_WLCSP-66_Die432:
   layout_y: 9
   row_skips: [[], [], [], [4, 5], [4, 5], [4, 5], [], [], []]
 ST_WLCSP-72_Die415:
+  compatible_mpns:
+    - "STM32L476J_E-G_Yx"
+    - "STM32L476JEYx"
+    - "STM32L476JGYx"
+    - "STM32L476JGYxP"
+    - "STM32L486JGYx"
   description: "WLCSP-72"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l476me.pdf#page=255"
   body_size_x: 4.4084
@@ -460,6 +612,9 @@ ST_WLCSP-72_Die415:
   layout_y: 9
   row_skips: [[], [], [], [[4, 7]], [[4, 7]], [[4, 7]], [], [], []]
 ST_WLCSP-72_3.38x3.38mm_P0.35m_Stagger:
+  compatible_mpns:
+    - "STM32U535JEYxQ"
+    - "STM32U545JEYxQ"
   description: "ST WLCSP-72, ST die ID 455"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u535je.pdf"
   body_size_x: 3.38
@@ -473,6 +628,9 @@ ST_WLCSP-72_3.38x3.38mm_P0.35m_Stagger:
   layout_x: 16
   layout_y: 9
 ST_WLCSP-80_3.50x3.27mm_P0.35mm_Stagger:
+  compatible_mpns:
+    - "STM32H563MIYxQ"
+    - "STM32H573MIYxQ"
   description: "ST WLCSP-80, ST die ID 484"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h563mi.pdf"
   body_size_x: 3.50
@@ -488,6 +646,10 @@ ST_WLCSP-80_3.50x3.27mm_P0.35mm_Stagger:
   layout_x: 10
   layout_y: 16
 ST_WLCSP-81_Die415:
+  compatible_mpns:
+    - "STM32L476M_E-G_Yx"
+    - "STM32L476MEYx"
+    - "STM32L476MGYx"
   description: "WLCSP-81"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l476me.pdf#page=252"
   body_size_x: 4.4084
@@ -499,6 +661,10 @@ ST_WLCSP-81_Die415:
   layout_x: 9
   layout_y: 9
 ST_WLCSP-81_Die421:
+  compatible_mpns:
+    - "STM32F446M_C-E_Yx"
+    - "STM32F446MCYx"
+    - "STM32F446MEYx"
   description: "WLCSP-81"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f446ze.pdf#page=192"
   body_size_x: 3.693
@@ -510,6 +676,11 @@ ST_WLCSP-81_Die421:
   layout_x: 9
   layout_y: 9
 ST_WLCSP-81_Die463:
+  compatible_mpns:
+    - "STM32F413M_G-H_Yx"
+    - "STM32F413MGYx"
+    - "STM32F413MHYx"
+    - "STM32F423MHYx"
   description: "WLCSP-81"
   size_source: "http://www.st.com/resource/en/datasheet/DM00282249.pdf#page=175"
   body_size_x: 4.039
@@ -521,6 +692,11 @@ ST_WLCSP-81_Die463:
   layout_x: 9
   layout_y: 9
 ST_WLCSP-81_4.02x4.27mm_Layout9x9_P0.4mm:
+  compatible_mpns:
+    - "STM32G473MEYx"
+    - "STM32G483MEYx"
+    - "STM32G474MEYx"
+    - "STM32G484MEYx"
   description: "ST WLCSP-81, ST die ID 469"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g483me.pdf"
   body_size_x: 4.02
@@ -532,6 +708,11 @@ ST_WLCSP-81_4.02x4.27mm_Layout9x9_P0.4mm:
   layout_x: 9
   layout_y: 9
 ST_WLCSP-90_Die413:
+  compatible_mpns:
+    - "STM32F405O_E-G_Yx"
+    - "STM32F405OEYx"
+    - "STM32F405OGYx"
+    - "STM32F415OGYx"
   description: "WLCSP-90"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f405og.pdf#page=164"
   body_size_x: 4.223
@@ -543,6 +724,10 @@ ST_WLCSP-90_Die413:
   layout_x: 10
   layout_y: 9
 ST_WLCSP-90_4.20x3.95mm_P0.4mm_Stagger:
+  compatible_mpns:
+    - "STM32U575OGYxQ"
+    - "STM32U575OIYxQ"
+    - "STM32U585OIYxQ"
   description: "ST WLCSP-90, ST die ID 482"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u575og.pdf#page=306"
   body_size_x: 4.20
@@ -556,6 +741,8 @@ ST_WLCSP-90_4.20x3.95mm_P0.4mm_Stagger:
   layout_x: 18
   layout_y: 10
 ST_WLCSP-99_4.42x3.77mm_Layout9x11_P0.35mm:
+  compatible_mpns:
+    - "STM32L476VGYxP"
   description: "ST WLCSP-99, ST die ID 415"
   size_source: "https://www.st.com/resource/en/datasheet/stm32l476vg.pdf"
   body_size_x: 4.42
@@ -567,6 +754,9 @@ ST_WLCSP-99_4.42x3.77mm_Layout9x11_P0.35mm:
   layout_x: 11
   layout_y: 9
 ST_WLCSP-100_Die422:
+  compatible_mpns:
+    - "STM32F302VCYx"
+    - "STM32F303VCYx"
   description: "WLCSP-100"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f302vc.pdf#page=133"
   body_size_x: 4.201
@@ -578,6 +768,8 @@ ST_WLCSP-100_Die422:
   layout_x: 10
   layout_y: 10
 ST_WLCSP-100_Die446:
+  compatible_mpns:
+    - "STM32F303VEYx"
   description: "WLCSP-100"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f303zd.pdf#page=162"
   body_size_x: 4.775
@@ -589,6 +781,11 @@ ST_WLCSP-100_Die446:
   layout_x: 10
   layout_y: 10
 ST_WLCSP-100_Die452:
+  compatible_mpns:
+    - "STM32F723V_C-E_Yx"
+    - "STM32F723VCYx"
+    - "STM32F723VEYx"
+    - "STM32F733VEYx"
   description: "WLCSP-100"
   size_source: "http://www.st.com/resource/en/datasheet/DM00330506.pdf#page=218"
   body_size_x: 4.201
@@ -600,6 +797,11 @@ ST_WLCSP-100_Die452:
   layout_x: 10
   layout_y: 10
 ST_WLCSP-100_Die461:
+  compatible_mpns:
+    - "STM32L496VGYx"
+    - "STM32L496VGYxP"
+    - "STM32L4A6VGYx"
+    - "STM32L4A6VGYxP"
   description: "WLCSP-100"
   size_source: "http://www.st.com/resource/en/datasheet/DM00284211.pdf#page=259"
   body_size_x: 4.618
@@ -611,6 +813,11 @@ ST_WLCSP-100_Die461:
   layout_x: 10
   layout_y: 10
 ST_WLCSP-100_4.40x4.38mm_Layout10x10_P0.4mm_Offcenter:
+  compatible_mpns:
+    - "STM32WB55VCYx"
+    - "STM32WB55VEYx"
+    - "STM32WB55VGYx"
+    - "STM32WB55VYYx"
   description: "ST WLCSP-100, off-center ball grid, ST die ID 495"
   size_source: "https://www.st.com/resource/en/datasheet/stm32wb55vc.pdf"
   body_size_x: 4.40
@@ -624,6 +831,9 @@ ST_WLCSP-100_4.40x4.38mm_Layout10x10_P0.4mm_Offcenter:
   offset_x: -0.08
   offset_y: -0.08
 ST_WLCSP-101_3.86x3.79mm_P0.35mm_Stagger:
+  compatible_mpns:
+    - "STM32H7R3V8Yx"
+    - "STM32H7S3V8Yx"
   description: "ST WLCSP-101, ST Die ID 485"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h7r3v8.pdf"
   body_size_x: 3.86
@@ -638,6 +848,12 @@ ST_WLCSP-101_3.86x3.79mm_P0.35mm_Stagger:
   layout_y: 19
   pad_skips: [W2,W4,W6]
 ST_WLCSP-104_Die437:
+  compatible_mpns:
+    - "STM32L151VDYxX"
+    - "STM32L151VEYx"
+    - "STM32L152VEYx"
+    - "STM32L162VDYxX"
+    - "STM32L162VEYx"
   description: "WLCSP-104"
   size_source: "http://www.st.com/resource/en/datasheet/stm32l152ze.pdf#page=127"
   body_size_x: 4.095
@@ -650,6 +866,8 @@ ST_WLCSP-104_Die437:
   layout_y: 12
   row_skips: [[], [], [], [], [5], [5], [5], [5], [], [], [], []]
 ST_WLCSP-115_4.63x4.15mm_P0.4mm_Stagger:
+  compatible_mpns:
+    - "STM32L496WGYxP"
   description: "ST WLCSP-115, ST die ID 461"
   size_source: "https://www.st.com/resource/en/datasheet/stm32l496wg.pdf"
   body_size_x: 4.63
@@ -663,6 +881,9 @@ ST_WLCSP-115_4.63x4.15mm_P0.4mm_Stagger:
   layout_x: 21
   layout_y: 11
 ST_WLCSP-115_3.73x4.15mm_P0.35mm_Stagger:
+  compatible_mpns:
+    - "STM32H725VGYx"
+    - "STM32H735VGYx"
   description: "ST WLCSP-115, ST die ID 483"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h725vg.pdf"
   body_size_x: 3.73
@@ -676,6 +897,12 @@ ST_WLCSP-115_3.73x4.15mm_P0.35mm_Stagger:
   layout_x: 11
   layout_y: 21
 ST_WLCSP-143_Die419:
+  compatible_mpns:
+    - "STM32F429ZGYx"
+    - "STM32F429ZIYx"
+    - "STM32F439Z_G-I_Yx"
+    - "STM32F439ZGYx"
+    - "STM32F439ZIYx"
   description: "WLCSP-143"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f429ng.pdf#page=203"
   body_size_x: 4.521
@@ -687,6 +914,11 @@ ST_WLCSP-143_Die419:
   layout_x: 11
   layout_y: 13
 ST_WLCSP-143_Die449:
+  compatible_mpns:
+    - "STM32F746Z_E-G_Yx"
+    - "STM32F746ZEYx"
+    - "STM32F746ZGYx"
+    - "STM32F756ZGYx"
   description: "WLCSP-143"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f746zg.pdf#page=202"
   body_size_x: 4.539
@@ -698,6 +930,16 @@ ST_WLCSP-143_Die449:
   layout_x: 11
   layout_y: 13
 ST_WLCSP-144_Die470:
+  compatible_mpns:
+    - "STM32L4R5Z_G-I_Yx"
+    - "STM32L4R5ZGYx"
+    - "STM32L4R5ZIYx"
+    - "STM32L4S5ZIYx"
+    - "STM32L4R9Z_G-I_Yx"
+    - "STM32L4R9ZGYx"
+    - "STM32L4R9ZIYx"
+    - "STM32L4R9ZIYxP"
+    - "STM32L4S9ZIYx"
   description: "WLCSP-144"
   size_source: "http://www.st.com/resource/en/datasheet/DM00366448.pdf#page=295"
   body_size_x: 5.24
@@ -709,6 +951,13 @@ ST_WLCSP-144_Die470:
   layout_x: 12
   layout_y: 12
 ST_WLCSP-150_5.38x5.47mm_P0.4m_Stagger:
+  compatible_mpns:
+    - "STM32U595ZIYxQ"
+    - "STM32U595ZJYxQ"
+    - "STM32U5A5ZJYxQ"
+    - "STM32U599ZIYxQ"
+    - "STM32U599ZJYxQ"
+    - "STM32U5A9ZJYxQ"
   description: "ST WLCSP-150, ST die ID 481"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u595zj.pdf"
   body_size_x: 5.38
@@ -722,6 +971,14 @@ ST_WLCSP-150_5.38x5.47mm_P0.4m_Stagger:
   layout_x: 13
   layout_y: 23
 ST_WLCSP-168_Die434:
+  compatible_mpns:
+    - "STM32F469A_E-G-I_Yx"
+    - "STM32F469AEYx"
+    - "STM32F469AGYx"
+    - "STM32F469AIYx"
+    - "STM32F479A_G-I_Yx"
+    - "STM32F479AGYx"
+    - "STM32F479AIYx"
   description: "WLCSP-168"
   size_source: "http://www.st.com/resource/en/datasheet/stm32f469ni.pdf#page=198"
   body_size_x: 4.891
@@ -733,6 +990,13 @@ ST_WLCSP-168_Die434:
   layout_x: 12
   layout_y: 14
 ST_WLCSP-180_Die451:
+  compatible_mpns:
+    - "STM32F768AIYx"
+    - "STM32F769A_G-I_Yx"
+    - "STM32F769AGYx"
+    - "STM32F769AIYx"
+    - "STM32F778AIYx"
+    - "STM32F779AIYx"
   description: "WLCSP-180"
   size_source: "http://www.st.com/resource/en/datasheet/DM00273119.pdf#page=240"
   body_size_x: 5.537
@@ -745,6 +1009,9 @@ ST_WLCSP-180_Die451:
   layout_y: 14
   row_skips: [[], [], [], [], [], [], [7], [7], [], [], [], [], [], []]
 ST_WLCSP-208_5.38x5.47mm_P0.35mm_Stagger:
+  compatible_mpns:
+    - "STM32U599BJYxQ"
+    - "STM32U5A9BJYxQ"
   description: "ST WLCSP-208, ST die ID 481"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u5a5aj.pdf"
   body_size_x: 5.38
@@ -758,6 +1025,9 @@ ST_WLCSP-208_5.38x5.47mm_P0.35mm_Stagger:
   layout_x: 26
   layout_y: 16
 ST_WLCSP-208_5.8x5.6mm_P0.35_Stagger:
+  compatible_mpns:
+    - "STM32U5F9BJYxQ"
+    - "STM32U5G9BJYxQ"
   description: "ST WLCSP-208, ST die ID 476"
   size_source: "https://www.st.com/resource/en/datasheet/stm32u5f9bj.pdf"
   body_size_x: 5.8
@@ -771,6 +1041,13 @@ ST_WLCSP-208_5.8x5.6mm_P0.35_Stagger:
   layout_x: 26
   layout_y: 16
 ST_WLCSP-100_4.437x4.456mm_Layout10x10_P0.4mm:
+  compatible_mpns:
+    - "STM32L4P5V_G-E_Yx"
+    - "STM32L4P5VGYx"
+    - "STM32L4P5VEYx"
+    - "STM32L4P5VGYxP"
+    - "STM32L4Q5VGYx"
+    - "STM32L4Q5VGYxP"
   description: "ST WLCSP-100, ST die ID 471"
   size_source: "https://www.st.com/resource/en/datasheet/stm32l4p5ve.pdf"
   body_size_x: 4.437
@@ -782,6 +1059,9 @@ ST_WLCSP-100_4.437x4.456mm_Layout10x10_P0.4mm:
   layout_x: 10
   layout_y: 10
 ST_WLCSP-132_4.57x4.37mm_Layout12x11_P0.35mm:
+  compatible_mpns:
+    - "STM32H7A3QIYxQ"
+    - "STM32H7B3QIYxQ"
   description: "ST WLCSP-132, ST die ID 480"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h7a3ai.pdf"
   body_size_x: 4.57
@@ -793,6 +1073,9 @@ ST_WLCSP-132_4.57x4.37mm_Layout12x11_P0.35mm:
   layout_x: 12
   layout_y: 11
 ST_WLCSP-156_4.96x4.64mm_Layout13x12_P0.35mm:
+  compatible_mpns:
+    - "STM32H747ZIYx"
+    - "STM32H757ZIYx"
   description: "ST WLCSP-156, ST die ID 450"
   size_source: "https://www.st.com/resource/en/datasheet/stm32h747xi.pdf"
   body_size_x: 4.96
@@ -804,6 +1087,9 @@ ST_WLCSP-156_4.96x4.64mm_Layout13x12_P0.35mm:
   layout_x: 13
   layout_y: 12
 ST_WLCSP-25_2.30x2.48mm_Layout5x5_P0.4mm:
+  compatible_mpns:
+    - "STM32G071EBYx"
+    - "STM32G081EBYx"
   description: "ST WLCSP-25, ST die ID 460"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g071eb.pdf"
   body_size_x: 2.30
@@ -815,6 +1101,11 @@ ST_WLCSP-25_2.30x2.48mm_Layout5x5_P0.4mm:
   layout_x: 5
   layout_y: 5
 ST_WLCSP-36_2.58x3.07mm_Layout6x6_P0.4mm:
+  compatible_mpns:
+    - "STM32L412T8Yx"
+    - "STM32L412TBYx"
+    - "STM32L412TBYxP"
+    - "STM32L422TBYx"
   description: "ST WLCSP-36, ST die ID 464"
   size_source: "https://www.st.com/resource/en/datasheet/stm32l412t8.pdf"
   body_size_x: 2.58
@@ -826,6 +1117,9 @@ ST_WLCSP-36_2.58x3.07mm_Layout6x6_P0.4mm:
   layout_x: 6
   layout_y: 6
 ST_WLCSP-49_3.15x3.13mm_Layout7x7_P0.4mm:
+  compatible_mpns:
+    - "STM32G431CBYx"
+    - "STM32G441CBYx"
   description: "ST WLCSP-49, ST die ID 468"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g431c6.pdf"
   body_size_x: 3.15
@@ -837,6 +1131,8 @@ ST_WLCSP-49_3.15x3.13mm_Layout7x7_P0.4mm:
   layout_x: 7
   layout_y: 7
 ST_WLCSP-49_3.30x3.38mm_Layout7x7_P0.4mm_Offcenter:
+  compatible_mpns:
+    - "STM32WB15CCYx"
   description: "ST WLCSP-49, off-center ball grid, ST die ID 494"
   size_source: "https://www.st.com/resource/en/datasheet/stm32wb15cc.pdf#page=119"
   body_size_x: 3.30
@@ -850,6 +1146,9 @@ ST_WLCSP-49_3.30x3.38mm_Layout7x7_P0.4mm_Offcenter:
   offset_x: -0.129
   offset_y: 0.012
 ST_WLCSP-64_3.56x3.52mm_Layout8x8_P0.4mm:
+  compatible_mpns:
+    - "STM32G491REYx"
+    - "STM32G4A1REYx"
   description: "ST WLCSP-64, ST die ID 479"
   size_source: "https://www.st.com/resource/en/datasheet/stm32g491re.pdf"
   body_size_x: 3.56
@@ -861,6 +1160,11 @@ ST_WLCSP-64_3.56x3.52mm_Layout8x8_P0.4mm:
   layout_x: 8
   layout_y: 8
 ST_WLCSP-81_4.36x4.07mm_Layout9x9_P0.4mm:
+  compatible_mpns:
+    - "STM32L552MEYxP"
+    - "STM32L552MEYxQ"
+    - "STM32L562MEYxP"
+    - "STM32L562MEYxQ"
   description: "ST WLCSP-81, ST die ID 472"
   size_source: "https://www.st.com/resource/en/datasheet/stm32l562ce.pdf"
   body_size_x: 4.36
