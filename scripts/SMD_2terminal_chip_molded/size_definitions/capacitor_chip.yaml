@@ -64,7 +64,8 @@ C_1808:
         minimum: 1.8
         maximum: 2.3
     terminal_length:
-        nominal: 0.2
+        minimum: 0.2
+        maximum: 0.95
     size_info: '(Body size source: datasheet page 3, https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_soft_en.pdf)'
 
 C_1812:
