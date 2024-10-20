@@ -1,7 +1,12 @@
-from KicadModTree.nodes import Pad, Footprint, FootprintType
+import pytest
+
 from KicadModTree import Vector2D
+from KicadModTree.nodes import Footprint, FootprintType
+from KicadModTree.nodes.base.Pad import Pad
+from KicadModTree.util.corner_selection import CornerSelection
 
 from KicadModTree.tests.test_utils.fp_file_test import SerialisationTest
+
 
 # Basic pad test arguments
 DEFAULT_FCU_KWARGS = {
@@ -11,6 +16,19 @@ DEFAULT_FCU_KWARGS = {
     "shape": Pad.SHAPE_RECT,
     "type": Pad.TYPE_SMT,
     "layers": ["F.Cu"],
+}
+
+# EXample pad with a chamfer, but doesn't specify a size or ratio
+PAD_CHAMFER_KWARGS = {
+    "number": "42",
+    "at": Vector2D(0, 0),
+    "size": Vector2D(2, 2),  # not 1 to make sure size != ratio
+    "shape": Pad.SHAPE_ROUNDRECT,
+    "type": Pad.TYPE_SMT,
+    "layers": ["F.Cu"],
+    "chamfer_corners": CornerSelection(
+        corner_selection={CornerSelection.BOTTOM_LEFT: True}
+    ),
 }
 
 
@@ -61,3 +79,23 @@ class TestPadSerialisaion(SerialisationTest):
         kicad_mod = Footprint("padtest", FootprintType.SMD)
         kicad_mod.append(pad)
         self.assert_serialises_as(kicad_mod, 'pad_zone_connection.kicad_mod')
+
+    def test_basic_chamfer_rounded(self):
+
+        # Copy the default args fo
+        pad_kwargs = PAD_CHAMFER_KWARGS.copy()
+
+        # Leave the round radius handler and chamfer size handler as default
+        pad = Pad(**pad_kwargs)
+
+        kicad_mod = Footprint("padtest", FootprintType.SMD)
+        kicad_mod.append(pad)
+
+        # check the corner and handlers are set
+        assert pad.chamfer_size_handler.chamferRequested()
+        assert pad.chamfer_ratio == 0.25
+        assert pad.radius_ratio == 0.25
+        assert pad.chamfer_corners.bottom_left
+
+        # And we can use this one to test the serialisation
+        self.assert_serialises_as(kicad_mod, 'pad_chamfer_basic.kicad_mod')
