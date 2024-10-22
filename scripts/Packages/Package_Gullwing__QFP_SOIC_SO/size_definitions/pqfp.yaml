@@ -16,7 +16,7 @@ PQFP-32_5x5mm_P0.5mm:
 
 PQFP-44_10x10mm_P0.8mm:
   manufacturer: 'Microchip'
-  size_source: 'https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/20005418B.pdf#'
+  size_source: 'https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/20005418B.pdf#page=10'
   body_size_x:
     nominal: 10
   body_size_y:
