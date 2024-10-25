@@ -133,6 +133,7 @@ def generate_one_footprint(pins, variant, configuration):
             type=Pad.TYPE_THT,
             shape=Pad.SHAPE_CIRCLE,
             size=mount_hole_pad_diameter,
+            fab_property=Pad.FabProperty.HEATSINK,
             drill=mount_hole_diameter,
             layers=Pad.LAYERS_THT,
         )
@@ -144,6 +145,7 @@ def generate_one_footprint(pins, variant, configuration):
             type=Pad.TYPE_THT,
             shape=Pad.SHAPE_CIRCLE,
             size=mount_hole_pad_diameter,
+            fab_property=Pad.FabProperty.HEATSINK,
             drill=mount_hole_diameter,
             layers=Pad.LAYERS_THT,
         )
