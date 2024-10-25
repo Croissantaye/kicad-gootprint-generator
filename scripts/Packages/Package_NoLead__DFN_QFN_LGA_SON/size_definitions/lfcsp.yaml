@@ -1016,7 +1016,7 @@ LFCSP-24-1EP_4x4mm_P0.5mm_EP0.5x0.5mm:
     minimum: 3.9
     nominal: 4
     maximum: 4.1
-  body_height:
+  overall_height:
     minimum: 0.60
     nominal: 0.55
     maximum: 0.50
