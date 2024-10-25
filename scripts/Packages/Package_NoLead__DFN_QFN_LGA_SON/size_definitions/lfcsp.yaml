@@ -1042,19 +1042,6 @@ LFCSP-24-1EP_4x4mm_P0.5mm_EP0.5x0.5mm:
   EP_num_paste_pads: [1, 1]
   #heel_reduction: 0.05 #for relatively large EP pads (increase clearance)
 
-  thermal_vias:
-    count: [1, 1]
-    drill: 0.3
-    # min_annular_ring: 0.15
-    paste_via_clearance: 0.1
-    EP_num_paste_pads: [1, 1]
-    #paste_between_vias: 1
-    #paste_rings_outside: 1
-    EP_paste_coverage: 0.70
-    #grid: [1, 1]
-    # bottom_pad_size:
-    paste_avoid_via: False
-
   pitch: 0.5
   num_pins_x: 6
   num_pins_y: 6
