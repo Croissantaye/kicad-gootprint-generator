@@ -1305,3 +1305,52 @@ Texas_QFN-32-1EP_5x5mm_P0.50mm_EP2.1x2.1mm:
   #pad_length_addition: 0.5
   #suffix: '_Pad{pad_x:.2f}x{pad_y:.2f}mm_HandSolder'
   #include_suffix_in_3dpath: 'False'
+
+Texas_VQFN-12_RNX0012C_:
+  device_type: 'VQFN'
+  manufacturer: 'Texas'
+  part_number: 'RNX0012C'
+  size_source: 'https://www.ti.com/lit/ds/symlink/lmr34215-q1.pdf'
+  ipc_class: 'qfn'
+  body_size_x:
+    minimum: 1.9
+    maximum: 2.1
+  body_size_y:
+    minimum: 2.9
+    maximum: 3.1
+  overall_height:
+    maximum: 1
+  lead_width:
+    minimum: 0.2
+    maximum: 0.3
+  lead_len:
+    minimum: 0.3
+    maximum: 0.5
+
+  pitch: 0.5
+  num_pins_x: 3
+  num_pins_y: 4
+  deleted_pins: [12, 14]
+  
+  # All these pad overrides as the pins are not centered on the part
+  pad_overrides:
+    1:
+      move: [null, -0.375]
+    2:
+      move: [null, -0.225]
+    11:
+      move: [null, -0.375]
+    10:
+      move: [null, -0.225]
+    3:
+      move: [null, -0.075]
+    4:
+      move: [null, -0.075]
+    9:
+      move: [null, -0.075]
+    8:
+      move: [null, -0.075]
+    12:
+      lead_len: 1.525 .. 1.725
+      size_increase: [null, 1]
+      move: [null, 0.725]
